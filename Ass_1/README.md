@@ -38,7 +38,8 @@ make part2
 ```
 ### 3 Run
 ```sh
-make run
+make run_part1
+make run_part2
 ```
 
 
