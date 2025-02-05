@@ -19,6 +19,7 @@ Ensure you have these dependencies installed before proceeding.
 ```sh
 git clone https://github.com/Viswazgummadi/CS426.git
 cd CS426/Ass_1
+```
 
 ### 2. Build
 
