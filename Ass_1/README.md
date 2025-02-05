@@ -1,4 +1,4 @@
-# Blockchain Project
+# Blockchain Assignment 1
 
 This project implements a basic blockchain system with support for sequential and multi-threaded block mining. It provides a way to manage and visualize a blockchain, as well as adding blocks using two different methods:
 
