@@ -19,22 +19,29 @@ int main() {
     Blockchain bc;
 
     // Confirm genesis block creation
-    cout << "Genesis block created with hash:    " << bc.getLatestBlock().hash << endl;
+//    cout << "Genesis block created with hash:    " << bc.getLatestBlock().hash << endl;
 
     vector<thread> miners;
+#ifdef PART1
+    // Sequential block addition
+    for (int i = 0; i < 50; i++) {
+        vector<string> txs = {"TX" + std::to_string(i+1)};
+        bc.addBlock(txs);
+    }
+#endif
 
 
-    for (int i = 0; i < 5; i++)
-    {
+
+#ifdef PART2
+    // Parallel mining using threads
+    vector<thread> miners;
+    for (int i = 0; i < 5; i++) {
         miners.emplace_back(miner, std::ref(bc), 10);
     }
-
-
-    for (auto& t : miners)
-    {
+    for (auto& t : miners) {
         t.join();
     }
-
+#endif
 
     // Display the current tip of the blockchain (the latest block)
 
@@ -48,9 +55,9 @@ int main() {
 //    bc.displayBlockchainHashes();
 
     // Display all block hashes in the blockchain
-    cout << "\nBlockchain Hashes from Genesis to Tip:" << endl;
-    bc.displayBlockchainHashes();  // Display the hashes of all blocks in the chain
-
+//    cout << "\nBlockchain Hashes from Genesis to Tip:" << endl;
+    bc.displayBlockchainHashes(0);  // Display the hashes of all blocks in the chain
+    bc.displayBlockchainHashes(1);
 
 
     return 0;

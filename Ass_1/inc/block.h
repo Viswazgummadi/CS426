@@ -5,6 +5,10 @@
 #include <vector>
 #include <string>
 #include <ctime>
+#include <sstream>
+#include <iomanip>
+#include <openssl/sha.h>
+
 
 using namespace std;
 
@@ -22,7 +26,7 @@ public:
     Block() : parentHash(""), nonce(0), difficulty("0000"), timestamp(0), merkleRoot(""), hash("") {}
 
     // Parameterized Constructor
-    Block(string prevHash, vector<string> txs, int _nonce = 0, string _difficulty = "0000");
+    Block(string prevHash, vector<string> txs, int _nonce = 0, string _difficulty = "0000000000000000000000000000000000000000");
 
     string calculateHash() const;
     static string calculateMerkleRoot(const vector<string>& txs);
