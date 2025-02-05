@@ -21,7 +21,7 @@ int main() {
     // Confirm genesis block creation
 //    cout << "Genesis block created with hash:    " << bc.getLatestBlock().hash << endl;
 
-    vector<thread> miners;
+    //vector<thread> miners;
 #ifdef PART1
     // Sequential block addition
     for (int i = 0; i < 50; i++) {

@@ -1,11 +1,14 @@
 CXX = g++
 CXXFLAGS = -Wall -std=c++11 -Iinc
 LDFLAGS = -lssl -lcrypto
+BIN_DIR = bin
 
 SRC = src/block.cpp src/blockchain.cpp src/utils.cpp src/main.cpp
 OBJ = $(SRC:.cpp=.o)
 BIN = bin/blockchain
 
+
+$(shell mkdir -p $(BIN_DIR))
 # Default target
 all: part1
 
