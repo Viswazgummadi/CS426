@@ -22,20 +22,20 @@ cd CS426/Ass_1
 ```
 
 ### 2. Build
-
+```sh
 make all
-
+```
 ## 2.1 Build Sequential block addition
-
+```sh
 make part1
-
+```
 ## 2.2 Build Multi-threaded block mining
-
+```sh
 make part2
-
+```
 ### 3 Run
-
+```sh
 make run
-
+```
 
 
