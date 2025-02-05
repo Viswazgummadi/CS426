@@ -20,7 +20,10 @@ Ensure you have these dependencies installed before proceeding.
 git clone https://github.com/Viswazgummadi/CS426.git
 cd CS426/Ass_1
 ```
-
+### prerequisites
+```sh
+sudo apt-get install libssl-dev
+```
 ### 2. Build
 ```sh
 make all
